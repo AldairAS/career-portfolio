@@ -1,124 +1,161 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
-
+import NavBar from "./components/NavBar";
 const inter = Inter({ subsets: ["latin"] });
+import ImagenPortfolio from "../public/img/fotoportafolio.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="https://aldairas.github.io/career-portfolio/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-col items-center justify-between">
+      {/* Sección para la presentación principal */}
+      <section className="flex flex-row max-w-[1170px]" id="profile">
+        <div className="basis-1/3 flex flex-col items-center justify-center py-40">
+          <Image
+            src={ImagenPortfolio}
+            alt="fotografía del creador del protafolio"
+            width={334}
+            height={275}
+            className="rounded-2xl"
+          />
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="https://aldairas.github.io/career-portfolio/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <div className="basis-2/3 flex justify-center flex-col">
+          <div className="p-12 w-[600px] text-lg text-[#393646] animate-[bounce_3s_ease-in-out_infinite]">
+            <p className="text-2xl">
+              Hola! soy <span className="font-semibold">Aldair Alvites</span>.
+            </p>
+            <p>
+              Bienvenidos a mi portafolio de
+              <span className="font-semibold">
+                {" "}
+                desarrollo de aplicaciones web{" "}
+              </span>
+              donde compartiré el contenido del curso universitario del mismo
+              nombre.
+            </p>
+            <p>
+              El contenido se organiza en base a las 16 semanas acádemicas del
+              curso
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col w-full bg-[#393646] text-lg font-semibold text-[#F4EEE0]">
+        <div className="w-full flex flex-row justify-center items-center p-10">
+          <div className="flex flex-col p-4 w-[450px]">
+            <p className="text-3xl font-extrabold text-center  p-4 m-2">
+              Primeras 8 semanas
+            </p>
+          </div>
+          <div className=" flex flex-col p-4 w-[430px]" id="content">
+            <Link
+              href={"/semana01"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 01
+            </Link>
+            <Link
+              href={"/semana02"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 02
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 03
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 04
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 05
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 06
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 07
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 08
+            </Link>
+          </div>
+        </div>
+        <div className="w-full flex flex-row justify-center items-center p-10">
+          <div className="flex flex-col p-4 w-[430px]">
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 09
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 10
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 11
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 12
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 13
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 14
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 15
+            </Link>
+            <Link
+              href={"#"}
+              className=" bg-[#6D5D6E] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#7b697c] hover:bg-[#F4EEE0] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+            >
+              Semana 16
+            </Link>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-3xl font-extrabold text-center p-4 m-2">
+              Últimas 8 semanas
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
