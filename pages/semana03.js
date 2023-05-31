@@ -293,8 +293,8 @@ export const Semana03 = () => {
                     <br />
                     <h2 className="font-semibold">Comentarios en JS</h2>
                     <ul>
-                      <li>// Comentario de una línea</li>
-                      <li>/* Comentario de dos líneas */</li>
+                      <li> Comentario de una línea</li>
+                      <li> Comentario de dos líneas */</li>
                     </ul>
                     <br />
                     <h2 className="font-semibold">Variables y operadores</h2>
