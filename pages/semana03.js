@@ -1,14 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import Ejerbts from "../public/img/ejerbootstrap.png"
-import Ejer01 from "../public/img/ejer01.png"
-import Ejer02 from "../public/img/ejer02.png"
-import Ejer03 from "../public/img/ejer03.png"
-import Reto from "../public/img/retojs.png"
+import Ejerbts from "../public/img/ejerbootstrapc.png"
+import Ejer01 from "../public/img/ejerc01.png"
+import Ejer02 from "../public/img/ejerc02.png"
+import Ejer03 from "../public/img/ejerc03.png"
+import Reto from "../public/img/retojsc.png"
 
-import Contenido1 from "../public/img/btshcj.jpg";
-import Bootstrap from "../public/img/Bootstrap_logo.svg.png";
-import Javascript from "../public/img/javascript.png"
+import Contenido1 from "../public/img/btshcjc.jpg";
+import Bootstrap from "../public/img/Bootstrap_logoc.png";
+import Javascript from "../public/img/javascriptc.png"
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 export const Semana03 = () => {
