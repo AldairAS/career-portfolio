@@ -1,14 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import Ejerbts from "../public/img/ejerbootstrap.PNG"
-import Ejer01 from "../public/img/ejer01.PNG"
-import Ejer02 from "../public/img/ejer02.PNG"
-import Ejer03 from "../public/img/ejer03.PNG"
-import Reto from "../public/img/retojs.PNG"
+import Ejerbts from "../public/img/ejerbootstrap.png"
+import Ejer01 from "../public/img/ejer01.png"
+import Ejer02 from "../public/img/ejer02.png"
+import Ejer03 from "../public/img/ejer03.png"
+import Reto from "../public/img/retojs.png"
 
 import Contenido1 from "../public/img/btshcj.jpg";
 import Bootstrap from "../public/img/Bootstrap_logo.svg.png";
-import Emmet from "../public/img/emmet.PNG";
 import Javascript from "../public/img/javascript.png"
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";

@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 import Html from "../public/img/html.png";
 import Css from "../public/img/css.png";
-import Contenido1 from "../public/img/capturaFigma.PNG";
+import Contenido1 from "../public/img/capturaFigma.png";
 import Figma from "../public/img/figma.png";
-import Emmet from "../public/img/emmet.PNG"
+import Emmet from "../public/img/emmet.png"
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 export const Semana02 = () => {
