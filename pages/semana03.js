@@ -13,11 +13,11 @@ import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 export const Semana03 = () => {
   const [ref, inView] = useInView({
-    triggerOnce: false, // La animación solo se activa una vez
+    triggerOnce: true, // La animación solo se activa una vez
     threshold: 0.2, // Porcentaje de visibilidad para activar la animación
   });
   const [ref2, inView2] = useInView({
-    triggerOnce: false, // La animación solo se activa una vez
+    triggerOnce: true, // La animación solo se activa una vez
     threshold: 0.2, // Porcentaje de visibilidad para activar la animación
   });
   const [ref3, inView3] = useInView({

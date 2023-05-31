@@ -29,9 +29,9 @@ export default function Home() {
         className="flex flex-col items-center justify-between w-full bg-gradient-to-r  from-[#7fa5c2] via-[#a9c0ce] to-[#DDE6ED] min-h-screen"
         id="profile"
       >
-        <div className=" flex flex-row max-w-[1170px] my-4">
+        <div className=" flex flex-row max-w-[1170px] my-4 max-[992px]:flex-col">
           {" "}
-          <div className="basis-1/3 flex flex-col items-center justify-center py-36">
+          <div className="basis-1/3 flex flex-col items-center justify-center py-36 max-[992px]:basis-full">
             <Image
               src={ImagenPortfolio}
               alt="fotografía del creador del protafolio"
@@ -40,7 +40,7 @@ export default function Home() {
               className="rounded-2xl"
             />
           </div>
-          <div className="basis-2/3 flex justify-center flex-col">
+          <div className="basis-2/3 flex justify-center flex-col max-[992px]:basis-full">
             <div className="p-12 w-[600px] text-lg text-[#526D82] animate-[bounce_6s_ease-in-out_infinite]">
               <p className="text-6xl font-medium">
                 Hola! soy{" "}
@@ -49,7 +49,7 @@ export default function Home() {
                 </span>
                 .
               </p>
-              <br/>
+              <br />
               <p className="font-medium">
                 Bienvenidos a mi portafolio de
                 <span className="font-semibold">
@@ -69,7 +69,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col w-full bg-[#27374D] text-lg font-semibold text-[#DDE6ED]">
-        <div className="w-full flex flex-row justify-center items-center p-10">
+        <div className="w-full flex flex-row justify-center items-center p-10 max-[992px]:flex-col">
           <div className="flex flex-col p-4 w-[450px]">
             <motion.div
               ref={ref}
@@ -110,39 +110,39 @@ export default function Home() {
                 Semana 03
               </Link>
               <Link
-                href={"#"}
+                href={"/semana04"}
                 className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#DDE6ED] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
               >
                 Semana 04
               </Link>
               <Link
-                href={"#"}
+                href={"/semana05"}
                 className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#DDE6ED] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
               >
                 Semana 05
               </Link>
               <Link
-                href={"#"}
+                href={"/semana06"}
                 className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#DDE6ED] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
               >
                 Semana 06
               </Link>
               <Link
-                href={"#"}
+                href={"/semana07"}
                 className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#DDE6ED] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
               >
                 Semana 07
               </Link>
-              <Link
-                href={"#"}
-                className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#DDE6ED] transition duration-500 transform hover:-translate-y-4 shadow-2xl "
+              <div
+                href={"/"}
+                className=" bg-[#526D82] py-4 px-4 m-2 rounded-2xl rounded-tr-none text-center hover:text-[#526D82] hover:bg-[#b88c8c] transition duration-500 transform  shadow-2xl cursor-pointer"
               >
                 Semana 08
-              </Link>
+              </div>
             </div>
           </motion.div>
         </div>
-        <div className="w-full flex flex-row justify-center items-center p-10">
+        <div className="w-full flex flex-row justify-center items-center p-10 max-[992px]:flex-col">
           <motion.div
             ref={ref2}
             initial="hidden"
